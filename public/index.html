@@ -14,6 +14,23 @@
     <script type="text/javascript">
       window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
     </script>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.6.5/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.6.5/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.6.5/firebase-performance-compat.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
     <!-- End loading animation -->
     <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
     <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
@@ -47,7 +64,7 @@
             <img alt="SSS Payment solution" class="logo-icon" src="assets/img/logos/it_logo.png">
           </a>
           <div class="d-flex align-items-center order-lg-3">
-            <a href="#" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Appointment</a>
+            <a href="#contact" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Appointment</a>
             <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
               <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" src="assets/img/icons/interface/icon-menu.svg">
               <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm"  src="assets/img/icons/interface/icon-x.svg">
@@ -611,12 +628,12 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-10 col-lg-9 col-xl-8">
-            <form data-form-email novalidate action="https://mailform.mediumra.re/jumpstart/smtp.php">
+            <form id="contact-form" method="post" action="#">
               <div class="form-row">
                 <div class="col-sm">
                   <div class="form-group">
                     <label for="contact-name">Your Name</label>
-                    <input type="text" name="contact-name" class="form-control" id="contact-name" required>
+                    <input type="text" name="contact-name" value="" class="form-control" id="contact-name" required>
                     <div class="invalid-feedback">
                       Please type your name.
                     </div>
@@ -654,16 +671,11 @@
                 </div>
               </div>
               <div class="form-row">
-                <div class="col-12">
-                  <div data-recaptcha data-sitekey="6Lfmz4gUAAAAAEau9IKfGA7leOKYAiRhv-3WA3gq"></div>
-                </div>
-              </div>
-              <div class="form-row">
                 <div class="col">
                   <div class="d-none alert alert-success" role="alert" data-success-message>
                     Thanks, a member of our team will be in touch shortly.
                   </div>
-                  <div class="d-none alert alert-danger" role="alert" data-error-message>
+                  <div class="d-none alert alert-danger" role="alert" id="error" style="display: none;">
                     Please fill all fields correctly.
                   </div>
                   <div class="d-flex justify-content-end">
@@ -872,7 +884,44 @@
             $('[data-countdown-date].add-countdown-time').attr('data-countdown-date', tenWeeksFromNow);
           })(jQuery);
     </script>
-
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+            const loadEl = document.querySelector('#load');
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+             
+            // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            firebase.analytics(); // call to activate
+            firebase.analytics().logEvent('tutorial_completed');
+            firebase.performance(); // call to activate
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    
+            try {
+              let app = firebase.app();
+              let features = [
+                'auth', 
+                'database', 
+                'firestore',
+                'functions',
+                'messaging', 
+                'storage', 
+                'analytics', 
+                'remoteConfig',
+                'performance',
+              ].filter(feature => typeof app[feature] === 'function');
+              loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+            } catch (e) {
+              console.error(e);
+              loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+            }
+          });
+        </script>
     <!-- Optional Vendor Scripts (Remove the plugin script here and comment initializer script out of index.js if site does not use that feature) -->
 
     <!-- AOS (Animate On Scroll - animates elements into view while scrolling down) -->
@@ -930,7 +979,35 @@
     <script type="text/javascript">
       // This script appears only in the demo - it disables forms with no action attribute to prevent 
       // navigating away from the page.
-      jQuery("form:not([action])").on('submit', function(){return false;});
+
+      const cform  = document.getElementById('contact-form');
+
+      cform.addEventListener('submit', (event) => {
+          // handle the form data
+          event.preventDefault();
+          console.log("form submit");
+          let name = document.getElementById('contact-name').value;
+      
+          let email = document.getElementById('contact-email').value;
+          
+          let company = document.getElementById('contact-company').value;
+          
+          let phone = document.getElementById('contact-phone').value;
+          
+          let message = document.getElementById('contact-message').value;
+          let data = {
+            name : name,
+            email : email,
+            company_name : company,
+            phoneNumber : phone,
+            message: message
+          }
+          console.log(data)
+          firebase.firestore().doc('/contactReq').set(data).then((res) => { 
+            console.log("res",res)
+          });
+      });
+
     </script>
 
   </body>
