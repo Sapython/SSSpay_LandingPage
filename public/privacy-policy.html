@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <title>SSS Pay - Payment Wallet</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <!-- Begin loading animation -->
+    <style>
+      @keyframes hideLoader{ 0%{ width: 100%; height: 100%; } 100%{ width: 0; height: 0; } } body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center; } body:not(.loaded) > div.loader{ opacity: 1; } body:not(.loaded){ overflow: hidden; } body.loaded > div.loader{ animation: hideLoader .5s linear .5s forwards; } .loading-animation{width:40px;height:40px;margin:100px auto;background-color:#009B72;border-radius:100%;animation:pulse 1s infinite ease-in-out}@keyframes pulse{0%{-webkit-transform:scale(0);transform:scale(0)}100%{-webkit-transform:scale(1);transform:scale(1);opacity:0}}
+      .logo-icon { width: 100%; max-width: 190px;}
+    </style>
+    <script type="text/javascript">
+      window.addEventListener("load",function(){document.querySelector('body').classList.add('loaded');});
+    </script>
+
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- End loading animation -->
+    <link href="assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,400i,600,700&amp;display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="loader">
+      <div class="loading-animation"></div>
+    </div>
+    <div class="navbar-container bg-light mb-5">
+      <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white" data-sticky="top">
+        <div class="container shadow-lg">
+          <a class="navbar-brand navbar-brand-dynamic-color fade-page" href="index.html">
+            <img alt="SSS Payment solution" class="logo-icon" src="assets/img/logos/it_logo.png">
+          </a>
+          <div class="d-flex align-items-center order-lg-3">
+            <a href="#contact" class="btn btn-primary ml-lg-4 mr-3 mr-md-4 mr-lg-0 d-none d-sm-block order-lg-3">Appointment</a>
+            <button aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+              <img alt="Navbar Toggler Open Icon" class="navbar-toggler-open icon icon-sm" src="assets/img/icons/interface/icon-menu.svg">
+              <img alt="Navbar Toggler Close Icon" class="navbar-toggler-close icon icon-sm"  src="assets/img/icons/interface/icon-x.svg">
+            </button>
+          </div>
+          <div class="collapse navbar-collapse order-3 order-lg-2 justify-content-lg-end" id="navigation-menu">
+            <ul class="navbar-nav my-3 my-lg-0">
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link nav-item "  href="#home" role="button">Home</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link nav-item "  href="#about" role="button">About us</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <div class="dropdown">
+                  <a class="nav-link nav-item "  href="#services" role="button">Services</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <section class="" id="about">
+      <div class="container">
+        <div class="row">
+            <h1>Privacy Policy</h1>
+            <p>Privacy Policy
+                Last updated: March 03, 2022
+                This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
+                We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy.</p>
+            <h2>Interpretation and Definitions</h2>
+            <p><strong>Interpretation</strong>
+                The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+            </p>
+            <p><strong>Definitions</strong>
+                For the purposes of this Privacy Policy:
+            </p>
+            <ul>
+                <li>Account means a unique account created for You to access our Service or parts of our Service.</li>
+                <li>Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to SSSPAY SERVICE PRIVATE LIMITD, PURAJAGARNATH SIRSA.</li>
+                <li>Cookies are small files that are placed on Your computer, mobile device or any other device by a website, containing the details of Your browsing history on that website among its many uses.</li>
+                    <li>Country refers to: Uttar Pradesh, India</li>
+                    <li>Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.</li>
+                    <li>Personal Data is any information that relates to an identified or identifiable individual.</li>
+                    <li>Service refers to the Website.</li>
+                    <li>Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.</li>
+                    <li>Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).</li>
+                    <li>Website refers to SSSPAY , accessible from WWW.SSSPAY.CO.IN</li>
+                    <li>You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.</li>
+            </ul>
+            <h2>Collecting and Using Your Personal Data</h2>
+            <br>
+            <h4>Types of Data Collected</h4>
+            <p>
+                <strong>Personal Data</strong> 
+                While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
+                Email address
+                First name and last name
+                Phone number
+                Address, State, Province, ZIP/Postal code, City
+                Usage Data
+                Usage Data
+                Usage Data is collected automatically when using the Service.
+                Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
+                When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
+                We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
+            </p>
+            <h4>Tracking Technologies and Cookies</h4>
+            <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store certain information. Tracking technologies used are beacons, tags, and scripts to collect and track information and to improve and analyze Our Service. The technologies We use may include:
+            </p>
+            <p>Cookies or Browser Cookies. A cookie is a small file placed on Your Device. You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent. However, if You do not accept Cookies, You may not be able to use some parts of our Service. Unless you have adjusted Your browser setting so that it will refuse Cookies, our Service may use Cookies.
+            </p>
+            <p>Flash Cookies. Certain features of our Service may use local stored objects (or Flash Cookies) to collect and store information about Your preferences or Your activity on our Service. Flash Cookies are not managed by the same browser settings as those used for Browser Cookies. For more information on how You can delete Flash Cookies, please read "Where can I change the settings for disabling, or deleting local shared objects?" available at https://helpx.adobe.com/flash-player/kb/disable-local-shared-objects-flash.html#main_Where_can_I_change_the_settings_for_disabling__or_deleting_local_shared_objects_
+            </p>
+            <p>Web Beacons. Certain sections of our Service and our emails may contain small electronic files known as web beacons (also referred to as clear gifs, pixel tags, and single-pixel gifs) that permit the Company, for example, to count users who have visited those pages or opened an email and for other related website statistics (for example, recording the popularity of a certain section and verifying system and server integrity).
+            </p>
+            <p>Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on Your personal computer or mobile device when You go offline, while Session Cookies are deleted as soon as You close Your web browser. Learn more about cookies: Cookies by PrivacyPolicies Generator.
+            </p>
+            <p>We use both Session and Persistent Cookies for the purposes set out below:</p>
+            <p>Necessary / Essential Cookies<br>
+                Type: Session Cookies<br>
+                Administered by: Us<br>
+                Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.
+                <br>Cookies Policy / Notice Acceptance Cookies<br>
+                Type: Persistent Cookies<br>
+                Administered by: Us<br>
+                Purpose: These Cookies identify if users have accepted the use of cookies on the Website.<br>
+                Functionality Cookies<br>
+                Type: Persistent Cookies<br>
+                Administered by: Us<br>
+                Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.
+                </p>
+                <p>For more information about the cookies we use and your choices regarding cookies, please visit our Cookies Policy or the Cookies section of our Privacy Policy.
+                </p>
+            <h4>Use of Your Personal Data</h4>
+            <p>The Company may use Personal Data for the following purposes:
+            </p>
+            <p>
+                To provide and maintain our Service, including to monitor the usage of our Service.
+                </p>
+                <p>To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.
+                    <br>For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.
+                    <br>To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.
+                    <br> To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
+                    <br> To manage Your requests: To attend and manage Your requests to Us.
+                    <br> For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.
+                    <br> For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.
+                    <br> We may share Your personal information in the following situations:
+                    <br> With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.
+                    <br> For business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.
+                    <br>With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
+                    <br>With business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
+                    <br> With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.
+                    <br> With Your consent: We may disclose Your personal information for any other purpose with Your consent.
+                    </p>
+            <h4>Retention of Your Personal Data
+            </h4>
+            <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
+                The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
+                </p>
+            <h4>Transfer of Your Personal Data
+            </h4>
+            <p>Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
+                Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
+                The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
+                 </p>
+            <h1>Disclosure of Your Personal Data
+            </h1>
+            <p><h4>Business Transactions</h4>
+                If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
+                <h4>Law enforcement</h4>
+                Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
+                </p>
+            <p>Other legal requirements
+                <br>The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
+                <br>Comply with a legal obligation
+                <br> Protect and defend the rights or property of the Company
+                <br>Prevent or investigate possible wrongdoing in connection with the Service
+                <br>Protect the personal safety of Users of the Service or the public
+                <br>Protect against legal liability
+                </p>
+                <br>
+            <h4 style="width: 100%"> Security of Your Personal Data</h4><br> 
+                The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
+            <br> 
+            <h1>Children's Privacy</h1>
+Our Service does not address anyone under the age of 18. We do not knowingly collect personally identifiable information from anyone under the age of 18. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 18 without verification of parental consent, We take steps to remove that information from Our servers.
+If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
+<h1>Links to Other Websites</h1>
+Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
+We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
+<h1>Changes to this Privacy Policy</h1>
+We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
+We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
+You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
+<h1>Contact Us</h1>
+If you have any questions about this Privacy Policy, You can contact us:
+By email: SUPPORT@SSSPAY.CO.IN
+By visiting this page on our website: ssspay.co.in
+By phone number: 8604863246
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-primary-3 text-white links-white pb-4 footer-1">
+      <div class="container">
+        <div class="row">   
+          <div class="col-xl-auto mr-xl-5 col-md-3">
+            <h5>Pages</h5>
+            <ul class="nav flex-row flex-md-column">
+                <li class="nav-item mr-3 mr-md-0">
+                  <a href="index.html" class="nav-link fade-page px-0 py-2">Home</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                  <a href="about.html" class="nav-link fade-page px-0 py-2">About us</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                  <a href="privacy-policy.html" class="nav-link fade-page px-0 py-2">Privacy Policy</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                  <a href="return-refund.html" class="nav-link fade-page px-0 py-2">Returns and Refunds</a>
+                </li>
+                <li class="nav-item mr-3 mr-md-0">
+                  <a href="terms-condition.html" class="nav-link fade-page px-0 py-2">Terms - Conditions</a>
+                </li>
+              </ul>
+          </div>
+          <div class="col mt-4 mt-md-0 mt-lg-5 mt-xl-0 order-lg-4 order-xl-3">
+            <h5>Articles</h5>
+            <ul class="list-unstyled d-flex flex-wrap">
+              <li class="col-12 col-lg-6 col-xl-12 px-0">
+                <div class="row my-2 my-md-3">
+                  <a class="col-5" href="#">
+                    <img class="rounded img-fluid hover-fade-out" src="assets/img/blog/thumb-2.jpg" alt="blog.1.image">
+                  </a>
+                  <div class="col">
+                    <a class="h6" href="#">Unveiling our new vision for Jumpstart</a>
+                    <div class="text-small text-muted mt-2">October 10th</div>
+                  </div>
+                </div>
+              </li>
+              <li class="col-12 col-lg-6 col-xl-12 px-0">
+                <div class="row my-2 my-md-3">
+                  <a class="col-5" href="#">
+                    <img class="rounded img-fluid hover-fade-out" src="assets/img/blog/thumb-1.jpg" alt="blog.2.image">
+                  </a>
+                  <div class="col">
+                    <a class="h6" href="#">Making the most of team-building sessions</a>
+                    <div class="text-small text-muted mt-2">October 2nd</div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg mt-2 mt-md-5 mt-lg-0 order-lg-3 order-xl-4">
+            <h5>Newsletter</h5>
+            <div class="card card-body bg-white">
+              <p>Get a bi-weekly digest of great articles</p>
+              <form data-form-email novalidate action="https://mailform.mediumra.re/jumpstart/mailchimp.php">
+                <div class="d-flex flex-column flex-sm-row form-group">
+                  <input class="form-control mr-sm-2 mb-2 mb-sm-0 w-auto flex-grow-1" name="email" placeholder="Email Address" type="email" required>
+                  <button type="submit" class="btn btn-primary btn-loading" data-loading-text="Sending">
+                    <!-- Icon for loading animation -->
+                    <svg class="icon bg-white" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                      <title>Icon For Loading</title>
+                      <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g>
+                          <polygon points="0 0 24 0 24 24 0 24" opacity="0"></polygon>
+                        </g>
+                        <path d="M12,4 L12,6 C8.6862915,6 6,8.6862915 6,12 C6,15.3137085 8.6862915,18 12,18 C15.3137085,18 18,15.3137085 18,12 C18,10.9603196 17.7360885,9.96126435 17.2402578,9.07513926 L18.9856052,8.09853149 C19.6473536,9.28117708 20,10.6161442 20,12 C20,16.418278 16.418278,20 12,20 C7.581722,20 4,16.418278 4,12 C4,7.581722 7.581722,4 12,4 Z"
+                        fill="#000000" fill-rule="nonzero" transform="translate(12.000000, 12.000000) scale(-1, 1) translate(-12.000000, -12.000000) "></path>
+                      </g>
+                    </svg>
+                    <span>Go</span>
+                  </button>
+                </div>
+                <div data-recaptcha data-sitekey="6Lemz4gUAAAAAElq4ZHFBzI7j8QUiYMn9I0mzQWG" data-size="invisible" data-badge="bottomleft"></div>
+                <div class="d-none alert alert-success w-100" role="alert" data-success-message>
+                  Thanks, a member of our team will be in touch shortly.
+                </div>
+                <div class="d-none alert alert-danger w-100" role="alert" data-error-message>
+                  Please fill all fields correctly.
+                </div>
+                <div class="text-small text-muted">We'll never share your email address</div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <hr>
+          </div>
+        </div>
+        <div class="row flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between text-center text-lg-left">
+          <div class="col-auto">
+            <div class="d-flex flex-column flex-sm-row align-items-center text-small">
+              <div class="text-muted">&copy; 2019 Page protected by reCAPTCHA and subject to Google's <a href="https://www.google.com/policies/privacy/" target="_blank">Privacy Policy</a> and <a href="https://policies.google.com/terms" target="_blank">Terms of Service</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-auto mt-3 mt-lg-0">
+            <ul class="list-unstyled d-flex mb-0">
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="assets/img/icons/social/dribbble.svg" alt="Dribbble" class="icon icon-xs bg-white" >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="assets/img/icons/social/twitter.svg" alt="Twitter" class="icon icon-xs bg-white" >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="assets/img/icons/social/github.svg" alt="Github" class="icon icon-xs bg-white" >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="assets/img/icons/social/facebook.svg" alt="Facebook" class="icon icon-xs bg-white" >
+                </a>
+              </li>
+              <li class="mx-3">
+                <a href="#" class="hover-fade-out">
+                  <img src="assets/img/icons/social/google.svg" alt="Google" class="icon icon-xs bg-white" >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a href="#top" class="btn btn-primary rounded-circle btn-back-to-top" data-smooth-scroll data-aos="fade-up" data-aos-offset="2000" data-aos-mirror="true" data-aos-once="false">
+      <img src="assets/img/icons/interface/icon-arrow-up.svg" alt="Icon" class="icon bg-white" >
+    </a>
+    <!-- Required vendor scripts (Do not remove) -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.js"></script>
+  </body>
+</html>
